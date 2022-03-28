@@ -1,0 +1,21 @@
+{
+	"passes" : 
+	[
+		{
+			"blending" : "translucent",
+			"combos" : 
+			{
+				"LIGHTING" : 0,
+				"REFLECTION" : 0,
+				"SPRITESHEET" : 1,
+				"VERSION" : 2
+			},
+			"constantshadervalues" : {},
+			"cullmode" : "nocull",
+			"depthtest" : "disabled",
+			"depthwrite" : "disabled",
+			"shader" : "genericimage2",
+			"textures" : [ "workshop/2499516781/Comp 1_00000" ]
+		}
+	]
+}

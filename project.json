@@ -1,0 +1,27 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Original Art: https://www.pixiv.net/en/artworks/93208061\nPicture Size: [1500x 3100]",
+	"file" : "scene.json",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "1 1 1"
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Anime" ],
+	"title" : "GuNya! (X-Rey) [Portrait Orientation]",
+	"type" : "scene",
+	"version" : 3,
+	"visibility" : "public",
+	"workshopid" : "2786089290",
+	"workshopurl" : "steam://url/CommunityFilePage/2786089290"
+}

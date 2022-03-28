@@ -1,0 +1,84 @@
+{
+	"dependencies" : 
+	[
+		"materials/workshop/2499516781/effects/blur_downsample4.json",
+		"materials/workshop/2499516781/effects/blur_gaussian_x.json",
+		"materials/workshop/2499516781/effects/blur_gaussian_y.json",
+		"materials/workshop/2499516781/effects/blur_combine.json",
+		"shaders/workshop/2499516781/effects/blur_downsample4.frag",
+		"shaders/workshop/2499516781/effects/blur_downsample4.vert",
+		"shaders/workshop/2499516781/effects/blur_gaussian.frag",
+		"shaders/workshop/2499516781/effects/blur_gaussian.vert",
+		"shaders/workshop/2499516781/effects/blur_combine.frag",
+		"shaders/workshop/2499516781/effects/blur_combine.vert"
+	],
+	"description" : "ui_editor_effect_blur_description",
+	"fbos" : 
+	[
+		{
+			"format" : "rgba_backbuffer",
+			"name" : "_rt_QuarterCompoBuffer1",
+			"scale" : 4
+		},
+		{
+			"format" : "rgba_backbuffer",
+			"name" : "_rt_QuarterCompoBuffer2",
+			"scale" : 4
+		}
+	],
+	"group" : "blur",
+	"name" : "ui_editor_effect_blur_title",
+	"passes" : 
+	[
+		{
+			"bind" : 
+			[
+				{
+					"index" : 0,
+					"name" : "previous"
+				}
+			],
+			"material" : "materials/workshop/2499516781/effects/blur_downsample4.json",
+			"target" : "_rt_QuarterCompoBuffer1"
+		},
+		{
+			"bind" : 
+			[
+				{
+					"index" : 0,
+					"name" : "_rt_QuarterCompoBuffer1"
+				}
+			],
+			"material" : "materials/workshop/2499516781/effects/blur_gaussian_x.json",
+			"target" : "_rt_QuarterCompoBuffer2"
+		},
+		{
+			"bind" : 
+			[
+				{
+					"index" : 0,
+					"name" : "_rt_QuarterCompoBuffer2"
+				}
+			],
+			"material" : "materials/workshop/2499516781/effects/blur_gaussian_y.json",
+			"target" : "_rt_QuarterCompoBuffer1"
+		},
+		{
+			"bind" : 
+			[
+				{
+					"index" : 0,
+					"name" : "_rt_QuarterCompoBuffer1"
+				},
+				{
+					"index" : 2,
+					"name" : "previous"
+				}
+			],
+			"material" : "materials/workshop/2499516781/effects/blur_combine.json"
+		}
+	],
+	"preview" : "preview/project.json",
+	"replacementkey" : "blur",
+	"version" : 1
+}

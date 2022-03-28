@@ -1,0 +1,193 @@
+{
+	"camera" : 
+	{
+		"center" : "0.00000 0.00000 -1.00000",
+		"eye" : "0.00000 0.00000 0.00000",
+		"up" : "0.00000 1.00000 0.00000"
+	},
+	"general" : 
+	{
+		"ambientcolor" : "0.30000 0.30000 0.30000",
+		"bloom" : false,
+		"bloomhdrfeather" : 0.1,
+		"bloomhdriterations" : 8,
+		"bloomhdrscatter" : 1.619,
+		"bloomhdrstrength" : 2.0,
+		"bloomhdrthreshold" : 1.0,
+		"bloomstrength" : 2.0,
+		"bloomthreshold" : 0.64999998,
+		"camerafade" : true,
+		"cameraparallax" : false,
+		"cameraparallaxamount" : 0.5,
+		"cameraparallaxdelay" : 0.1,
+		"cameraparallaxmouseinfluence" : 0.5,
+		"camerapreview" : true,
+		"camerashake" : false,
+		"camerashakeamplitude" : 0.5,
+		"camerashakeroughness" : 1.0,
+		"camerashakespeed" : 3.0,
+		"clearcolor" : "0.70000 0.70000 0.70000",
+		"clearenabled" : true,
+		"farz" : 10000.0,
+		"fov" : 50.0,
+		"hdr" : false,
+		"nearz" : 0.0099999998,
+		"orthogonalprojection" : 
+		{
+			"height" : 3100,
+			"width" : 1500
+		},
+		"skylightcolor" : "0.30000 0.30000 0.30000",
+		"zoom" : 1.0
+	},
+	"objects" : 
+	[
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 20,
+			"image" : "models/Без имени-2.json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "2",
+			"origin" : "750.00000 1550.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "1500.00000 3100.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"effects" : 
+			[
+				{
+					"file" : "effects/xray/effect.json",
+					"id" : 42,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"multiply" : 1.0,
+								"size" : 0.80000001
+							},
+							"id" : 43,
+							"textures" : [ null, "Без имени-2", "particle/halo_6" ]
+						}
+					],
+					"visible" : true
+				},
+				{
+					"file" : "effects/xray/effect.json",
+					"id" : 183,
+					"name" : "",
+					"passes" : 
+					[
+						{
+							"constantshadervalues" : 
+							{
+								"multiply" : 1,
+								"size" : 0.80000001
+							},
+							"id" : 0,
+							"textures" : [ null, "Без имени-2", "particle/halo_6" ]
+						}
+					],
+					"visible" : true
+				}
+			],
+			"id" : 14,
+			"image" : "models/Без имени-1.json",
+			"ledsource" : false,
+			"locktransforms" : true,
+			"name" : "1",
+			"origin" : "750.00000 1550.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : false,
+			"scale" : "1.00000 1.00000 1.00000",
+			"size" : "1500.00000 3100.00000",
+			"solid" : true,
+			"visible" : true
+		},
+		{
+			"alpha" : 1.0,
+			"anchor" : "center",
+			"angles" : "0.00000 0.00000 0.00000",
+			"backgroundbrightness" : 1.0,
+			"backgroundcolor" : "1.00000 1.00000 1.00000",
+			"brightness" : 1.0,
+			"color" : "0.93333 0.29020 0.32157",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"font" : "fonts/Alcubierre.otf",
+			"horizontalalign" : "center",
+			"id" : 214,
+			"image" : null,
+			"ledsource" : false,
+			"locktransforms" : false,
+			"model" : null,
+			"name" : "Bass Clock 24h",
+			"opaquebackground" : true,
+			"origin" : "766.17224 2810.20581 0.00000",
+			"padding" : 32,
+			"parallaxDepth" : "1.00000 1.00000",
+			"particle" : null,
+			"perspective" : false,
+			"pointsize" : 50.0,
+			"scale" : 
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '2076275935';\n\n/**\n * Configure these to control smoothing and the frequency.\n */\nlet frequencyResolution = 16; // Must be 16, 32 or 64 per channel.\nlet sourceFrequency = 0; // Must be smaller than frequencyResolution. Lower values for bass, higher for treble.\nlet smoothingRate = 20;\n\n/**\n * This creates a permanent link to the audio response data.\n */\nlet audioBuffer = engine.registerAudioBuffers(frequencyResolution);\nvar smoothValue = 0;\nvar scale;\n\n/**\n * @param {Vec3} value\n */\nexport function update() {\n\tlet audioDelta = audioBuffer.average[sourceFrequency] - smoothValue;\n\tsmoothValue += audioDelta * engine.frametime * smoothingRate;\n\tsmoothValue = Math.min(1.0, smoothValue);\n\tscale.y = 1 + (smoothValue * 0.55)\n\tscale.x = 1 + (smoothValue * 0.75);\n\treturn scale;\n}\n\n/**\n * @param {Vec3} value\n */\nexport function init(value) {\n\tscale = value;\n}\n",
+				"value" : "1.00000 1.00000 1.00000"
+			},
+			"size" : "621.00000 244.00000",
+			"solid" : true,
+			"text" : 
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '2076275935';\n\n// This will be used to separate each element\nlet delimiter = ':';\n\n// Whether you want to see the seconds or not\nlet showSeconds = false;\n\n// Whether you want a 24h or 12h style format\nlet use24hFormat = true;\n\n/**\n * @param {String} value (for property 'text')\n */\nexport function update(value) {\n    let time = new Date();\n    var hours = time.getHours();\n    if (!use24hFormat) {\n        hours %= 12;\n        if (hours == 0) {\n            hours = 12;\n        }\n    }\n    hours = (\"00\" + hours).slice(-2);\n    let minutes = (\"00\" + time.getMinutes()).slice(-2);\n    value = hours + delimiter + minutes;\n    if (showSeconds) {\n        let seconds = (\"00\" + time.getSeconds()).slice(-2);\n        value += delimiter + seconds;\n    }\n    return value;\n}\n\n\n\n/**\n * @param {Object} userProperties\n */\nexport function applyUserProperties(userProperties) {\n\tif (userProperties.intclock) {\n\t\tuse24hFormat = userProperties.intclock;\n\t}\n}\n",
+				"value" : "GuNya!"
+			},
+			"verticalalign" : "center",
+			"visible" : true
+		},
+		{
+			"alignment" : "center",
+			"alpha" : 1.0,
+			"angles" : "0.00000 0.00000 0.00000",
+			"brightness" : 1.0,
+			"color" : "1.00000 1.00000 1.00000",
+			"colorBlendMode" : 0,
+			"copybackground" : true,
+			"id" : 180,
+			"image" : "models/workshop/2099072548/bar.json",
+			"ledsource" : false,
+			"locktransforms" : false,
+			"name" : "bar",
+			"origin" : "-32.00000 0.00000 0.00000",
+			"parallaxDepth" : "1.00000 1.00000",
+			"perspective" : true,
+			"scale" : "0.00000 0.00000 0.00000",
+			"size" : "4.00000 4.00000",
+			"solid" : true,
+			"visible" : 
+			{
+				"script" : "'use strict';\n// Please note: Do not remove this line or asset references may break.\nexport let __workshopId = '2099072548';\n\nvar bars = [];\nvar baseOrigin;\nvar baseAngle;\nlet audioData = engine.registerAudioBuffers(64);\n\n/**\n * @param {Boolean} value (for property 'visible')\n */\nexport function update() {\n\tvar origin = baseOrigin.copy();\n\tvar scale = new Vec3(6);/* edit this value for bar width, for horizontal 6 for vertical 3*/\n\n\tfor (var i = 0; i < 64; ++i) {\n\t\tlet amt = audioData.average[i];\n\t\tlet bar = bars[i];\n\n\t\tscale.y = amt * 100;\n\t\torigin.x += 30;/*edit this value for horizontal bar spacing, for horizontal bar 30 for vertical 0*/\n\t\torigin.y += 0; /*edit this value for Vertical bar spacing, for Vertical bar 17 for horizontal 0 */\n\t\tbar.scale = scale;\n\t\tbar.origin = origin;\n\n\t}\n}\n\n/**\n * @param {Boolean} value (for property 'visible')\n */\nexport function init() {\n\tbars.push(thisLayer);\n    let thisIndex = thisScene.getLayerIndex(thisLayer);\n    for (var i = 1; i < 64; ++i) {\n        let newBar = thisScene.createLayer('models/bar.json');\n        thisScene.sortLayer(newBar, thisIndex);\n\t\tnewBar.parallaxDepth = new Vec2(0,0);\n        bars.push(newBar);\n    }\n\n\tfor (var i = 0; i < 64; ++i) {\n\t\tlet angle = 360 * (i / 64);\n\t\tlet bar = bars[i];\n\t\tbar.angles = new Vec3(0, 0, 0); /* this controls bar rotation, the 3rd value is the rotation to change, for horizontal bar 0 for vertical 90*/\n\n\n\t}\n\tbaseOrigin = thisLayer.origin;\n\n}\n",
+				"value" : true
+			}
+		}
+	],
+	"version" : 1
+}
