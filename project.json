@@ -1,3 +1,4 @@
+
 {
 	"contentrating" : "Everyone",
 	"description" : "Original Art: https://www.pixiv.net/en/artworks/93208061\nPicture Size: [1500x 3100]",
@@ -6,12 +7,53 @@
 	{
 		"properties" : 
 		{
-			"schemecolor" : 
+			"authorInformation" : 
 			{
-				"order" : 0,
-				"text" : "ui_browse_properties_scheme_color",
+				"index" : 9,
+				"order" : 109,
+				"text" : "<hr><center><a href='https://steamcommunity.com/id/Feelogil/'><img src='https://i.ibb.co/17y1pzX/coin-single1.png'></a><a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2786220660'><img src='https://steamuserimages-a.akamaihd.net/ugc/931555098127475381/BDB7CF3D5E4F82B5CBEF20B227BFCC35031B119F/'></a></center>",
+				"type" : "text"
+			},
+			"backgroundcolor" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "Background Color",
+				"type" : "color",
+				"value" : "0.7254901960784313 0.7176470588235294 0.7176470588235294"
+			},
+			"backgroundcolors" : 
+			{
+				"condition" : "1010",
+				"index" : 1,
+				"order" : 101,
+				"text" : "Main Gura Color",
 				"type" : "color",
 				"value" : "1 1 1"
+			},
+			"clockcolor" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "Clock Color",
+				"type" : "color",
+				"value" : "1 0 1"
+			},
+			"numberscolor" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "Numbers Color",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"schemecolor" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.7254901960784313 0.7176470588235294 0.7176470588235294"
 			}
 		},
 		"supportsaudioprocessing" : true
@@ -19,9 +61,9 @@
 	"preview" : "preview.jpg",
 	"tags" : [ "Anime" ],
 	"title" : "GuNya! (X-Rey) [Portrait Orientation]",
-	"type" : "scene",
-	"version" : 3,
+	"type" : "Scene",
+	"version" : 18,
 	"visibility" : "public",
-	"workshopid" : "2786089290",
-	"workshopurl" : "steam://url/CommunityFilePage/2786089290"
+	"workshopid" : "2786220660",
+	"workshopurl" : "steam://url/CommunityFilePage/2786220660"
 }
